@@ -1,0 +1,15 @@
+-var news = [{'img':'../images/content-image/news-img-1.jpg','category':'НОВОСТИ','title':'С Новым Годом!!!','description':'Поздравляем С Новым Годом! Пусть наступающий 2016-ый год принесет Вам любовь, здоровье и красоту! С наилучшими пожеланиями Доктор Арбатов и Администрация сайта.'},{'img':'../images/content-image/news-img-2.jpg','category':'БЛОГ','title':'Интервью о ринопластике  с Арбатовым В.В.','description':'Влияет ли толщина кожи на конечный результат? Зачем подрезают уздечку? Какие хрящи затрагиваются во время операции? На эти и многие другие вопросы Вы узнаете ответы, прочитав интервью о ринопластике с Арбатовым В.В.'},{'img':'../images/content-image/news-img-3.jpg','category':'СТАТЬИ','title':'Введение в блефаропластику','description':'В статье Арбатов В.В. рассказывает о зарождении блефаропластики, о целях и особенностях проводимой операции.'},{'img':'../images/content-image/news-img-4.jpg','category':'СТАТЬИ','title':'Интервью о ринопластике  с Арбатовым В.В.','description':'Влияет ли толщина кожи на конечный результат? Зачем подрезают уздечку? Какие хрящи затрагиваются во время операции? На эти и многие другие вопросы Вы узнаете ответы, прочитав интервью о ринопластике с Арбатовым В.В.'},{'img':'../images/content-image/news-img-5.jpg','category':'ФОТО','title':'Увеличивающая круропластика','description':'Фоторепортаж операции - yвеличивающая круропластика. Оперирует - Арбатов В.В., ассистируют - Стайсупов В.Ю.,Сидорова Е.А.'},{'img':'../images/content-image/news-img-6.jpg','category':'ФОТО','title':'Ринопластика (первичная)','description':'Фоторепортаж операции - ринопластика (первичная). Оперирует-Арбатов В.В., ассистируют-Стайсупов В.Ю., Сидорова Е.А.'}]
+.news
+	h2.news__main-title Новости
+	.news__list
+		each item in news
+			.news__item
+				a(href="#").news__image-holder
+					img(src="#{item.img}", alt="#{item.title}").news__img
+				h4.news__category
+					a(href="#" title="#{item.category}").news__category-link= item.category
+				h5.news__title
+					a(href="#").news__title-link= item.title
+				article.news__description= item.description
+	.news__link-holder
+		a(href="#").news__more-link Все новости

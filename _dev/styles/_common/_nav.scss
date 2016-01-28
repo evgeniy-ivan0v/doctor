@@ -1,0 +1,26 @@
+.nav {
+	background-color: #faf8f3;
+	padding: 13px 0 15px;
+}
+.nav__list {
+	@extend %clearfix;
+	@extend .container;
+}
+.nav__item {
+	float: left;
+	border-left: 1px solid $color-border;
+	padding: 0 0.62em 0 0.47em;
+	&:first-child {
+		border: none;
+		padding-left: 0;
+	}
+}
+.nav__link {
+	@include transition(all 0.5s ease);
+	color: $color-text;
+	text-decoration: none;
+	font-size: em(13.1693);
+	&:hover {
+		color: $color-grean;
+	}
+}

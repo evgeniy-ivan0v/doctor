@@ -1,0 +1,14 @@
+-var fotos = [{'img':'../images/content-image/work-foto-1.jpg','class':'mammo','title':'Ринопластика','text':'Пример 1'},{'img':'../images/content-image/work-foto-2.jpg','class':'lipo','title':'Ринопластика','text':'Пример 2'},{'img':'../images/content-image/work-foto-3.jpg','class':'rino','title':'Ринопластика','text':'Пример 3'},{'img':'../images/content-image/work-foto-4.jpg','class':'eye','title':'Блефаропластика','text':'Пример 2'}]
+.last-work
+	h2.last-work__title Последние операции
+	article.last-work__article
+		p
+			| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+	ul.last-work__foto-list
+		each foto in fotos
+			li.last-work__item
+				a(href="#" class="last-work__work-link last-work__work-link_#{foto.class}" title="#{foto.title}")
+					img(src="#{foto.img}", alt="#{foto.title}").last-work__img
+					span.last-work__work-title= foto.title
+						span.last-work__work-text= foto.text
+	a(href="#").last-work__more-link Все результаты >>

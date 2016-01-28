@@ -1,0 +1,95 @@
+.reviews {
+	background-color: #fff;
+    padding: 12px 0;
+}
+.reviews__holder {
+	@extend .container;
+	@extend %clearfix;
+	overflow: visible;
+}
+.reviews__title {
+	@include title ();
+    margin-bottom: 33px;
+}
+.reviews__list, .reviews__vk {
+	float: left;
+	width: 460px;
+}
+.reviews__list {
+	margin-right: 10px;
+	position: relative;
+	&:before {
+		content: open-quote;
+	    font-family: "ptserifregular", sans-serif;
+	    font-size: 6.23875em;
+	    color: #d8e5ed;
+	    quotes: "\201c" "\201d";
+	    top: -18px;
+	    position: absolute;
+	    left: -68px;
+	}
+	.column {
+		width: 220px !important;
+		&.first {
+			margin-right: 19px;
+		}
+	}
+}
+.reviews__item {
+	background-color: #f3f9fa;
+	margin-bottom: 38px;
+	padding: 16px 19px;
+	&_video {
+		background-color: #fff;
+		padding: 0;
+	}
+}
+.reviews__video-holder {
+	position: relative; 
+	@include block-size(221px,147px); 
+	overflow:hidden; 
+	margin-bottom: 16px;
+	& iframe, & object, & embed {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%;
+		height: 100%; 
+	}
+}
+.reviews__text {
+	font-size: em(13);
+	margin-bottom: 14px;
+}
+.reviews__item-link-holder {
+	padding: 7px 0 0;
+}
+.reviews__item-link {
+	@extend .link;
+}
+.reviews__name {
+	position: relative;
+	@extend .link;
+	border-bottom: none;
+	display: block;
+	font-size: .899em;
+    padding: 0 0 0 36px;
+	&:before {
+		content: "";
+		$icon-width: icons-sprite-width(review-vk);
+		$icon-height: icons-sprite-height(review-vk);
+		@include icons-sprite(review-vk);
+		@include block-size ($icon-width, $icon-height);
+		position: absolute;
+		top: 2px;
+		left: 0;
+		display: block;
+	}
+	font-size: em(14);
+}
+.reviews__more-link {
+	@extend .link;
+	position: absolute;
+	bottom: 11px;
+    left: 36.5%;
+}

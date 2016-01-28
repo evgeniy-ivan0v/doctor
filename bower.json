@@ -1,0 +1,11 @@
+{
+  "name": "doctor-arbatov",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery": "1.11.3",
+    "normalize.css": "~3.0.2",
+    "bxslider-4": "~4.2.5",
+    "jquery.columnizer": "~1.6.2",
+    "html5shiv": "~3.7.3"
+  }
+}

@@ -1,0 +1,27 @@
+.contact-header {
+	@include inlineblock();
+}
+
+.contact-header__item {
+	@include inlineblock();
+	&:first-child {
+		padding-right: 18px;
+	    border-right: 1px solid $color-border;
+	    margin-right: 14px;
+	}
+}
+.contact-header__sity {
+	font-size: em(13.1213);
+	display: block;
+}
+.contact-header__link {
+	font-family: 'opensans-semibold', 'Arial', 'Helvetica', sans-serif;
+	display: block;
+	text-decoration: none;
+	color: $color-grean;
+	font-size: em(20);
+	outline: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}

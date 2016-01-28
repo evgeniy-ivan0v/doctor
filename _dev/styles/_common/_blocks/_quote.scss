@@ -1,0 +1,35 @@
+.quote {
+	background-color: #fff;
+    max-width: 1039px;
+    padding: 64px 59px 56px;
+    margin: -41px auto 41px;
+    position: relative;
+    min-width: 960px;
+    overflow: hidden;
+	&:before {
+		content: open-quote;
+	    font-family: "ptserifregular", sans-serif;
+	    font-size: 6.23875em;
+	    color: #d8e5ed;
+	    quotes: "\201c" "\201d";
+	    text-indent: -7px;
+	    overflow: hidden;
+	    line-height: 1.061em;
+	    top: 24px;
+	    position: absolute;
+	    left: 50%;
+	    @include block-size(34px,25px);
+	    @include inlineblock();
+	    @include transform (translate(-40%,0));
+	}
+	.column {
+		margin: 0 11px;
+		max-width: 438px;
+	}
+}
+.quote__link {
+	@extend .link;
+	position: absolute;
+    bottom: 57px;
+    right: 50px;
+}

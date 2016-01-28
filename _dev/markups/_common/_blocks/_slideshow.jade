@@ -1,0 +1,5 @@
+-var slides = [{'source':'../images/content-image/slide-1.jpg','alt':'Операциия доктора Арбатова'},{'source':'../images/content-image/slide-2.jpg','alt':'Операциия доктора Арбатова'},{'source':'../images/content-image/slide-3.jpg','alt':'Операциия доктора Арбатова'}]
+.slideshow
+	each slide in slides
+		.slideshow__item
+			img(src="#{slide.source}" alt="slide.alt").slideshow__img

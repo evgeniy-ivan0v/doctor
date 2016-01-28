@@ -1,0 +1,28 @@
+$icons: lang-rus, lang-eng;
+.locale {
+	@include inlineblock();
+}
+.locale__item {
+	@include inlineblock();
+	@include transition(all 0.5s ease);
+	opacity: .4;
+	margin-right: 3px;
+	&:last-child {
+		margin-right: 0;
+	}
+	&_active, &:hover {
+		opacity: 1;
+	}
+}
+.locale__link {
+	text-indent: -9999px;
+	display: block;
+	@each $icon in $icons {
+		&_#{$icon} {
+			$icon-width: icons-sprite-width($icon);
+			$icon-height: icons-sprite-height($icon);
+			@include icons-sprite($icon);
+			@include block-size ($icon-width, $icon-height);
+		}
+	}
+}

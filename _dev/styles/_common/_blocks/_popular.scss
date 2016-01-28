@@ -1,0 +1,152 @@
+.popular {
+	background-color: #fff;
+	padding: 80px 0 69px;
+}
+.popular__holder {
+	@extend .container;
+	@extend %clearfix;
+}
+.popular__title {
+	@include title ();
+	margin-bottom: 32px;
+}
+.popular__list {
+	@extend %clearfix;
+	margin-right: -21px;
+	margin-bottom: 4px;
+}
+.popular__item {
+	position: relative;
+	float: left;
+	@include block-size (220px, 230px);
+	text-decoration: none;
+	color: $color-text;
+	margin-right: 20px;
+	overflow: hidden;
+	@include transition(all 0.5s ease);
+	border-bottom: 10px solid transparent;
+	&:before {
+		@include transition(all 0.5s ease);
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include block-square(100%);
+		z-index: 1;
+		opacity: 0;
+		background-color: $color-grean;
+	}
+	&:after {
+		@include transition(all 0.5s ease);
+		content: attr(data-text);
+		opacity: 0;
+		z-index: 2;
+		top: -100px;
+		color: #fff;
+		text-transform: uppercase;
+		text-align: center;
+		border: 1px solid #fff;
+		font-family: 'opensans-bold', sans-serif;
+		font-size: em(14);
+		padding: 16px 43px 13px;
+	    position: absolute;
+	    left: 17px;
+	}
+	&:hover {
+		.popular__item-title {
+			color: #fff;
+			&_mammo:before {
+				@include icons-sprite(mamm-white);
+			} 
+			&_rino:before {
+				@include icons-sprite(nos-white);
+			} 
+			&_lipo:before {
+				@include icons-sprite(liposuction-white);
+			} 
+			&_eye:before {
+				@include icons-sprite(eye-white);
+			} 
+		}
+		&:before {
+			opacity: .5;
+		}
+		&:after {
+			top: 74px;
+			opacity: 1;
+		}
+		border-bottom-color: $color-grean;
+	}
+}
+.popular__img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.popular__bage {
+	position: absolute;
+	display: block;
+	top: 19px;
+    left: 23px;
+	&_top {
+		$icon-width: icons-sprite-width(crown);
+		$icon-height: icons-sprite-height(crown);
+		@include icons-sprite(crown);
+		@include block-size ($icon-width, $icon-height);
+	}
+}
+.popular__item-title {
+	@include transition(all 0.5s ease);
+	font-family: 'opensans-semibold', sans-serif;
+	font-size: em(14);
+	position: absolute;
+	bottom: 16px;
+    left: 21px;
+    z-index: 2;
+    text-transform: uppercase;
+    line-height: 23px;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+	}
+	&_mammo:before {
+    	top: -37px;
+    	left: 2px;
+		$icon-width: icons-sprite-width(mamm-grean);
+		$icon-height: icons-sprite-height(mamm-grean);
+		@include icons-sprite(mamm-grean);
+		@include block-size ($icon-width, $icon-height);
+	} 
+	&_rino:before {
+		top: -40px;
+    	left: 2px;
+		$icon-width: icons-sprite-width(nos-grean);
+		$icon-height: icons-sprite-height(nos-grean);
+		@include icons-sprite(nos-grean);
+		@include block-size ($icon-width, $icon-height);
+	} 
+	&_lipo:before {
+		top: -39px;
+    	left: -1px;
+		$icon-width: icons-sprite-width(liposuction-grean);
+		$icon-height: icons-sprite-height(liposuction-grean);
+		@include icons-sprite(liposuction-grean);
+		@include block-size ($icon-width, $icon-height);
+	} 
+	&_eye:before {
+		top: -35px;
+    	left: -2px;
+		$icon-width: icons-sprite-width(eye-grean);
+		$icon-height: icons-sprite-height(eye-grean);
+		@include icons-sprite(eye-grean);
+		@include block-size ($icon-width, $icon-height);
+	} 
+}
+.popular__more-link {
+	@extend .link;
+	float: right;
+	font-size: em(15.6816);
+}

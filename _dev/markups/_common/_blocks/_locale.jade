@@ -1,0 +1,5 @@
+-var locals = [{'text':'rus','class':'lang-rus'},{'text':'eng','class':'lang-eng'}]
+ul.locale
+	each local in locals
+		li(class="locale__item" + ((local.class == 'lang-rus') ? " locale__item_active" : ''))
+			a(href="#" title="#{local.text}" class="locale__link locale__link_#{local.class}")= local.text

@@ -1,0 +1,17 @@
+.promo {
+	position: relative;
+	margin: 0 auto;
+}
+.promo__title {
+	color: #4f4e4e;
+	font-size: em(73.8474);
+	font-weight: normal;
+    position: absolute;
+    z-index: 1;
+    max-width: 410px;
+    margin: 0;
+    padding: 0;
+    top: 103px;
+    line-height: 1.07em;
+    left: 131px;
+}

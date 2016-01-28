@@ -1,0 +1,7 @@
+-var contacts = [{'sity':'Санкт-Петербург','phone':'+7 812 430-44-41'},{'sity':'Москва','phone':'+7 495 642-642-3'}]
+.contact-header
+	ul.contact-header__list
+		each contact in contacts
+			li.contact-header__item
+				span.contact-header__sity= contact.sity
+				a(href="tel:#{contact.phone}" title="#{contact.phone}").contact-header__link= contact.phone

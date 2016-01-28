@@ -1,0 +1,9 @@
+.record {
+	@extend .button;
+	@include inlineblock();
+	background-color: $color-red;
+	position: absolute;
+    top: 25px;
+    right: 10px;
+    padding: 13px 15px;
+}

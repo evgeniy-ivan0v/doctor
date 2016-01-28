@@ -1,0 +1,82 @@
+.bx-wrapper {
+	position: relative;
+}
+.bx-prev, .bx-next {
+	text-indent: -9999px;
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	z-index: 2;
+	top: 187px;
+	outline: none;
+	@include user-select();
+}
+.bx-prev {
+	$icon-width: icons-sprite-width(arow-left);
+	$icon-height: icons-sprite-height(arow-left);
+	@include icons-sprite(arow-left);
+	@include block-size ($icon-width, $icon-height);
+	left: 50px;
+	&:hover {
+		$icon-width: icons-sprite-width(arow-left-hover);
+		$icon-height: icons-sprite-height(arow-left-hover);
+		@include icons-sprite(arow-left-hover);
+		@include block-size ($icon-width, $icon-height);
+	}
+}
+.bx-next {
+	$icon-width: icons-sprite-width(arow-right);
+	$icon-height: icons-sprite-height(arow-right);
+	@include icons-sprite(arow-right);
+	@include block-size ($icon-width, $icon-height);
+	right: 50px;
+	&:hover {
+		$icon-width: icons-sprite-width(arow-right-hover);
+		$icon-height: icons-sprite-height(arow-right-hover);
+		@include icons-sprite(arow-right-hover);
+		@include block-size ($icon-width, $icon-height);
+	}
+}
+.bx-pager {
+	position: absolute;
+    bottom: 48px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.bx-pager-item {
+	@include inlineblock();
+	@include block-square(18px);
+	margin: 0 5px;
+	background-color: #fff;
+	outline: none;
+	@include user-select();
+	&:hover .bx-pager-link:before{
+		background-color: $color-grean;
+	}
+}
+.bx-pager-link {
+	@include transition(all 0.5s ease);
+	outline: none;
+	display: block;
+	text-indent: -9999px;
+	position: relative;
+	@include user-select();
+	@include block-square(18px);
+	&:before {
+		content: "";
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		@include block-square(6px);
+		background-color: #fff;
+	}
+	&.active:before {
+		background-color: $color-grean;
+	}
+}
+.slideshow__img {
+	width: 100%;
+	height: auto;
+	display: block;
+}

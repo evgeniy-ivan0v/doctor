@@ -1,0 +1,12 @@
+-var popular = [{'img':'../images/content-image/popular-img-1.jpg','class':'mammo','title':'маммопластика','bage':'top'},{'img':'../images/content-image/popular-img-2.jpg','class':'rino','title':'Ринопластика','bage':'top'},{'img':'../images/content-image/popular-img-3.jpg','class':'lipo','title':'Липосакция'},{'img':'../images/content-image/popular-img-4.jpg','class':'eye','title':'Омолаживающие операции'}]
+.popular
+	.popular__holder
+		.popular__title Популярные направления
+		.popular__list
+			each item in popular
+				a(href="#" data-text="РЕЗУЛЬТАТЫ" title="#{item.title}").popular__item
+					img(src="#{item.img}", alt="#{item.title}").popular__img
+					- if (item.bage)
+						span(class="popular__bage popular__bage_#{item.bage}")
+					span(class="popular__item-title popular__item-title_#{item.class}")= item.title
+		a(href="#").popular__more-link Все результаты >>

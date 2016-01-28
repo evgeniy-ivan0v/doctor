@@ -1,0 +1,10 @@
+.logo {
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+	@include inlineblock();
+}
+.logo__text {
+	position: absolute;
+	left: -9999px;
+}
